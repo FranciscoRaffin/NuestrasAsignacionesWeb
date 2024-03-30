@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header class="headder">
+        <!-- <h1 id="marca-nav">Distribuidora del Sur</h1> -->
+        <img src='imagenes/logo.png' alt="logo"  id="logo">
+    </header>
+    
+    
+    
+    <!-----------------------CONTENIDO----------------------->
+    <nav id="category-nav">
+        <button onclick="filterProducts('all')">Mostrar Todos</button>
+    </nav>
+
+    <div id="content-container">
+        <div id="product-list"></div>
+        <div id="cart-container">
+            <h2 style="color: var(--color1); text-align: center;">🛒 Tu pedido </h2>
+            <table id="cart-table">
+                <thead>
+                    <tr> <th style=" background-color: #9999ff00"></th>
+                        <th>Producto</th> <th>Cant.</th> <th>$/unidad</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body"></tbody>
+            </table>
+            <button class="centrado" 
+                    id="boton-FP"
+                    style="display: none;"
+                    onclick="finalizarPedido()"
+                    > Finalizar pedido
+            </button>
+        </div>
+    </div>
+
+
+    <!-------------------------------------------------------->
+    <br><br><br>
+
+
+</body>
+
+
+<footer>
+    <p> © Distribuidora del Sur 2024. Todos los derechos reservados </p>
+</footer>
+
+<script src="datos_catalogo.js"> </script>
+<script src="funciones.js"> </script>
+<script src="main.js"> </script>
+
+
+</html>
+
+
