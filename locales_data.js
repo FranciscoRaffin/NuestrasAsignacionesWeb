@@ -26,8 +26,8 @@ const bernal_colab = [
     [ "131062" ,   "Natanae lGomez"       ],
 //  [ "18893" ,    "Walter R"             ],
     [ "131067" ,   "Danilo"               ],
-    [ "131066" ,   "Fray"                 ],
-    [ "b9830" ,    "Erica"                ]
+    [ "131066" ,   "Fray"                 ]
+
 ];
 
 
