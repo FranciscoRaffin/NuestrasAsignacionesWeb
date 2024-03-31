@@ -1,0 +1,352 @@
+
+/* Paleta de colores */
+:root {
+    --color1: #220C10;
+    --color2: #a1a1a185; /* NAV */ 
+    --color4: #0E2835;
+    --color3: #921f25d2;
+    --color5: #60708533; /* Body */
+    --color6: #e6e6e660;
+}
+
+
+
+#marca-nav {
+    font-family:'Lucida Bright', Times, serif;
+    color: rgb(189, 68, 47);
+}
+
+
+
+#logo {
+    padding: 0px;
+    max-width: 230px;
+    
+}
+
+header {
+    background-color: var(--color2); /* Usar color2 para el encabezado */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset;
+
+    /*
+    background-image: url('imagenes/logo.jpg');
+    background-size: auto; /* Esto ajustará la imagen para cubrir todo el fondo 
+    background-position: center; /* Esto centrará la imagen en el fondo 
+    */
+}
+
+.product-container {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border;
+    background-color: #f7f7f7c7;
+    border-radius: 9px;
+
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-name {
+    font-size: 18px;
+    margin: 10px 0; 
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+}
+
+.add-to-cart-button {
+    background-color: var(--color3); /* Usar color3 para el botón de añadir al carrito */
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#product-list {
+    text-align: center;
+}
+
+#category-nav {
+    margin-bottom: 20px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color5); /* Usar color5 para el fondo del cuerpo */
+    color: #333;
+    
+}
+
+
+
+nav {
+    background-color: var(--color2); /* Usar color2 para la barra de navegación */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+section {
+    padding: 20px;
+}
+
+
+table {
+    width: 100%;
+    margin-top: 0px;
+    border-radius: 0px;
+    background-color: #a9aaaa17;
+}
+
+th  {
+    background-color: var(--color2); /* Usar color2 para las celdas de encabezado */
+    color: rgb(100, 100, 100);
+}
+
+td  {
+    background-color: #ffffff00; /* Dejar el fondo blanco para las celdas de datos */
+    color: rgb(0, 0, 0);
+    max-width: 300px; /* Establece el ancho máximo en píxeles */
+}
+
+
+
+footer {
+    background-color: var(--color2); /* Usar color2 para el pie de página */
+    color: var(--color1);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+
+}
+
+.catalogo-table {
+    display: none;
+    margin-top: 10px;
+}
+
+.catalogo-table.active {
+    display: table;
+}
+
+button {
+    background-color: var(--color4); /* Usar color4 para los botones */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #921F24;
+}
+
+#content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#product-list {
+    flex: 1; /* Toma el espacio disponible */
+    
+}
+
+#cart-container {
+    width: 380px; /* O ajusta el ancho según tus necesidades */
+    background-color:var(--color6); /* Cambia el color de fondo según tus preferencias */
+    padding: 0px; /* Ajusta el espacio interno según tus necesidades */
+    border-radius: 10px;
+
+}
+
+#cart-table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#cart-table th, #cart-table td {
+    
+    /* border: 1px solid var(--color2); /* Usar color2 para los bordes de la tabla */
+    border: none;
+    padding: 2px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.quitar-column{
+    background-color: #8787a800
+    
+}
+
+.remove-from-cart-button {
+    background-color: var(--color3);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: right;
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    margin-right: 0px;
+    cursor: pointer;
+    border-radius: 7px;
+    
+}
+
+
+.quantity-text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.centrado {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#end-form {
+    background-color: #33333313;
+}
+
+
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+#end-pedido-bottom{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: #545cce;
+    color: #f1f1f1;
+}
+
+#end-pedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+
+.form-row label,
+.form-row input {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#end-cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 7px;
+    
+    
+}
+
+#end-cart-table th, #end-cart-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    max-width: 300px; /* Establece el ancho máximo en píxeles */
+    min-width: 120px;
+    
+}
+
+#end-cart-table th {
+    background-color: #547aa773;
+    color: white;
+}
+
+#end-cart-body tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#end-cart-body tr:hover {
+    background-color: #ddd;
+}
