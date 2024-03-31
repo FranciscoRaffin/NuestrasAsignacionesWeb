@@ -90,3 +90,5 @@ function generarTablaAsignaciones(asignacionesData) {
 
 
 
+const volverAlInicio = () => window.location.href = "index.html" 
+const irASolicitarHorario = () => window.location.href = "pedir_horario.html"

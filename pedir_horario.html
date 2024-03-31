@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header class="headder">
+        <!-- <h1 id="marca-nav">Distribuidora del Sur</h1> -->
+        <img src='imagenes/logo.jpg' alt="logo"  id="logo">
+
+
+
+
+
+    <!-----------------------CONTENIDO----------------------->
+        <div>
+            <button onclick="volverAlInicio()"
+            style="display: block;"
+            
+            > ← 
+            </button>
+        </div>
+    </header>
+
+    <div style="margin-left: 80px;">
+    <h2> Solicitud de horarios (No anda, no toquen porque me spamean al mail) </h2>
+
+
+    </p>
+
+    </div>
+
+
+
+        <form
+        
+        action="https://formspree.io/f/mqkrbyyz"
+        method="POST">
+            <input type="hidden" name="N°Pedido" id=nro_pedido>
+            <input type="hidden" name="Pedido" id=pedido_field> 
+
+            <label>Datos personales:</label>
+            <div class="form-row">
+                <input type="text" id="nombre" name="Nombre" required placeholder="Nombre Apellido">
+
+                <input type="text" id="Legajo" name="Legajo"  required placeholder="Legajo">
+            </div>
+
+
+            <label>Datos de solicitud: (que horario PUEDE trabajar) </label>
+            <div class="form-row">
+                <input type="date"     id="nombre" name="Nombre" required placeholder="Nombre Apellido">
+                <input type="time"     id="Desde"  name="Desde"  required placeholder="Desde">
+                <input type="time"     id="Hasta"  name="Hasta"  required placeholder="Hasta">
+                <input type="checkbox" id="Off"    name="Off"             placeholder="Off">
+                <p>Off</p>
+            </div>
+            <label for="mensaje">Info adicional:  (opcional)</label>
+            <textarea id="mensaje" name="Dudas" placeholder="Opcional"></textarea>
+            <button type="submit">Solicitar horario</button>
+            
+        </form>
+        <br><br>
+    
+    </div>
+
+
+
+
+    <!-------------------------------------------------------->
+    <br><br><br>
+</body>
+
+
+
+<footer>
+    <p> © Distribuidora del Sur 2024. Todos los derechos reservados </p>
+</footer>
+
+<script src="datos_catalogo.js"> </script>
+<script src="funciones.js"> </script>
+<script src="main.js"> </script>
+
+
+</html>
+
+
