@@ -23,70 +23,68 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function mostrarAsignaciones() {
-    
-    bernal_colab.forEach(empleado => {
-
-        const legajo = empleado[0];
-        const nombre = empleado[1];
-        fetchAsignacion(legajo)
-            .then(asignaciones => {
-                mostrarAsignacionEnPagina(legajo, nombre, asignaciones);
-            });
-        
-        
-    });
-    
+async function mostrarAsignaciones() {
+    try {
+        for (const empleado of bernal_colab) {
+            const legajo = empleado[0];
+            const nombre = empleado[1];
+            const asignaciones = await fetchAsignacion(legajo); // Esperar a que se resuelva la promesa
+            mostrarAsignacionEnPagina(legajo, nombre, asignaciones);
+        }
+    } catch (error) {
+        console.error('Error al mostrar las asignaciones:', error);
+    }
 }
 
-function mostrarAsignacionEnPagina(legajo, nombre, asignaciones) {
+function mostrarAsignacionEnPagina(legajo, nombre, asignacionesJSON) {
     const contenedor = document.getElementById('asignaciones-container');
     const empleadoDiv = document.createElement('div');
     const legajoTitulo = document.createElement('h2');
     legajoTitulo.textContent = `Legajo: ${legajo} | Nombre: ${nombre}`;
     empleadoDiv.appendChild(legajoTitulo);
 
+    // Convertir la cadena JSON de asignaciones en un objeto JavaScript
+    const asignaciones = JSON.parse(asignacionesJSON);
 
+    // Verificar si hay asignaciones disponibles
+    if (asignaciones && asignaciones.asignaciones && asignaciones.asignaciones.length > 0) {
+        // Crear tabla
+        const tabla = document.createElement('table');
+        tabla.classList.add('asignaciones-table');
+
+        // Encabezado de la tabla
+        const encabezado = tabla.createTHead();
+        const filaEncabezado = encabezado.insertRow();
+        const encabezados = ['Fecha', 'Hora de entrada', 'Hora de salida', 'Tienda'];
+        encabezados.forEach(encabezado => {
+            const th = document.createElement('th');
+            th.textContent = encabezado;
+            filaEncabezado.appendChild(th);
+        });
+
+        // Cuerpo de la tabla
+        const cuerpo = tabla.createTBody();
+        asignaciones.asignaciones.forEach(asignacion => {
+            const fila = cuerpo.insertRow();
+            fila.insertCell().textContent = asignacion.fecha;
+            fila.insertCell().textContent = asignacion.horaEntrada;
+            fila.insertCell().textContent = asignacion.horaSalida;
+            fila.insertCell().textContent = asignacion.tienda;
+        });
+
+        empleadoDiv.appendChild(tabla);
+    } else {
+        // Si no hay asignaciones disponibles, mostrar un mensaje
         const errorMensaje = document.createElement('p');
-        errorMensaje.textContent = asignaciones;
+        errorMensaje.textContent = 'No hay asignaciones disponibles.';
         empleadoDiv.appendChild(errorMensaje);
-  
+    }
+
     contenedor.appendChild(empleadoDiv);
 }
 
 
-function generarTablaAsignaciones(asignacionesData) {
-    const asignaciones = asignacionesData.asignaciones;
-    const tabla = document.createElement('table');
-    tabla.classList.add('asignaciones-table');
 
-    // Crear encabezado de la tabla
-    const encabezado = tabla.createTHead();
-    const filaEncabezado = encabezado.insertRow();
-    const encabezadoFecha = document.createElement('th');
-    encabezadoFecha.textContent = 'Fecha';
-    filaEncabezado.appendChild(encabezadoFecha);
-    const encabezadoHoraEntrada = document.createElement('th');
-    encabezadoHoraEntrada.textContent = 'Hora de entrada';
-    filaEncabezado.appendChild(encabezadoHoraEntrada);
-    const encabezadoHoraSalida = document.createElement('th');
-    encabezadoHoraSalida.textContent = 'Hora de salida';
-    filaEncabezado.appendChild(encabezadoHoraSalida);
-
-    // Crear cuerpo de la tabla
-    const cuerpo = tabla.createTBody();
-    asignaciones.forEach(asignacion => {
-        const fila = cuerpo.insertRow();
-        const celdaFecha = fila.insertCell();
-        celdaFecha.textContent = asignacion.fecha;
-        const celdaHoraEntrada = fila.insertCell();
-        celdaHoraEntrada.textContent = asignacion.horaEntrada;
-        const celdaHoraSalida = fila.insertCell();
-        celdaHoraSalida.textContent = asignacion.horaSalida;
-    });
-
-    return tabla;
-}
 
 
 
