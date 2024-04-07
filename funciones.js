@@ -40,7 +40,7 @@ function mostrarAsignacionEnPagina(legajo, nombre, asignacionesJSON) {
     const contenedor = document.getElementById('asignaciones-container');
     const empleadoDiv = document.createElement('div');
     const legajoTitulo = document.createElement('h4');
-    legajoTitulo.textContent = `Legajo: ${legajo} | Nombre: ${nombre}`;
+    legajoTitulo.textContent = `${nombre} (${legajo})`;
     empleadoDiv.appendChild(legajoTitulo);
 
     // Convertir la cadena JSON de asignaciones en un objeto JavaScript
