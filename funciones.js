@@ -39,7 +39,7 @@ async function mostrarAsignaciones() {
 function mostrarAsignacionEnPagina(legajo, nombre, asignacionesJSON) {
     const contenedor = document.getElementById('asignaciones-container');
     const empleadoDiv = document.createElement('div');
-    const legajoTitulo = document.createElement('h2');
+    const legajoTitulo = document.createElement('h4');
     legajoTitulo.textContent = `Legajo: ${legajo} | Nombre: ${nombre}`;
     empleadoDiv.appendChild(legajoTitulo);
 
