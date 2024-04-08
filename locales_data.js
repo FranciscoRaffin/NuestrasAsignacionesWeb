@@ -20,13 +20,14 @@ const bernal_colab = [
     [ "81164" ,    "Juan Pablo Lecina"    ],
     [ "127002" ,   "Tomas Carbajal"       ],
     [ "95085" ,    "Agustin Cornejo"      ],
-    [ "131005" ,   "Lautaro Lescano"      ],
+    [ "131005" ,   "Lautaro Lezcano"      ],
     [ "131061" ,   "Luna Vasquez"         ],
     [ "61379" ,    "Agustina Amodeo"      ],
     [ "131062" ,   "Natanae lGomez"       ],
 //  [ "18893" ,    "Walter R"             ],
     [ "131067" ,   "Danilo"               ],
-    [ "131066" ,   "Fray"                 ]
+    [ "131066" ,   "Fray"                 ],
+    [ "B6652"  ,   "Yamila"               ]
 
 ];
 
