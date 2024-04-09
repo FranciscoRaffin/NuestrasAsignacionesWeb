@@ -55,7 +55,7 @@ function mostrarAsignacionEnPagina(legajo, nombre, asignacionesJSON) {
         // Encabezado de la tabla
         const encabezado = tabla.createTHead();
         const filaEncabezado = encabezado.insertRow();
-        const encabezados = ['Fecha', 'Hora de entrada', 'Hora de salida', 'Tienda'];
+        const encabezados = ['Fecha', 'Hora de entrada', 'Hora de salida'];
         encabezados.forEach(encabezado => {
             const th = document.createElement('th');
             th.textContent = encabezado;
@@ -69,7 +69,7 @@ function mostrarAsignacionEnPagina(legajo, nombre, asignacionesJSON) {
             fila.insertCell().textContent = asignacion.fecha;
             fila.insertCell().textContent = asignacion.horaEntrada;
             fila.insertCell().textContent = asignacion.horaSalida;
-            fila.insertCell().textContent = asignacion.tienda;
+            //fila.insertCell().textContent = asignacion.tienda;
         });
 
         empleadoDiv.appendChild(tabla);
