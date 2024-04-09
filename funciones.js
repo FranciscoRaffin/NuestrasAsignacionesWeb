@@ -6,7 +6,7 @@ function fetchAsignacion(legajo) {
     .then(response => response.text()) // Retorna el contenido como texto
     .then(data => {
       // Actualiza el contenido del elemento en el HTML
-      document.getElementById('contenido-fetch').innerText = `fetching ${legajo}...`
+      document.getElementById('contenido-fetch').innerText = `Buscando empleado ${legajo}...`
       //const tablaAsignaciones = generarTablaAsignaciones(data.toString)
       //document.body.appendChild(tablaAsignaciones);
       return data;
