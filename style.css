@@ -52,6 +52,11 @@ header {
 
 }
 
+.espacio-entre-dias {
+    background-color: black;
+    height: 10px; /* Ajusta la altura del espacio entre días según sea necesario */
+}
+
 .product-image {
     max-width: 100%;
     height: auto;
