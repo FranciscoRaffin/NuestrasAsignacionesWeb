@@ -16,7 +16,7 @@ function mensajeDeCarga() {
     if (conteo >= bernal_colab.length) {
         return "Asignaciones cargadas correctamente!";
     } else {
-        return `Buscando empleado ${conteo} de ${bernal_colab.length}${animacion()}`;
+        return `Buscando empleados ${conteo} de ${bernal_colab.length}${animacion()}`;
     }
 }
 
