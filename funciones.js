@@ -1,10 +1,22 @@
 var conteo = 1;
+var fotograma = 0;
+function animacion() {
+         if (fotograma==0){fotograma++
+             return " ◰."}
+    else if (fotograma==1) {fotograma++
+        return " ◳.."}
+    else if (fotograma==2) {fotograma++
+        return " ◲..."}
+    else {fotograma = 0
+        return " ◱...."}
+    
+}
 
 function mensajeDeCarga() {
     if (conteo >= bernal_colab.length) {
         return "Asignaciones cargadas correctamente!";
     } else {
-        return `Buscando empleado ${conteo} de ${bernal_colab.length}`;
+        return `Buscando empleado ${conteo} de ${bernal_colab.length}${animacion()}`;
     }
 }
 
