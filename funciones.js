@@ -1,4 +1,13 @@
+var conteo = 1 
 
+function mensajeDeCarga() {
+    if (conteo >= bernal_colab.length) {
+        return "       Asignaciones cargadas correctamente!"    
+    } else {
+        return `Buscando empleado ${conteo} de ${bernal_colab.length} `
+    }
+
+}
 
 function fetchAsignacion(legajo) {
 
@@ -6,7 +15,8 @@ function fetchAsignacion(legajo) {
     .then(response => response.text()) // Retorna el contenido como texto
     .then(data => {
       // Actualiza el contenido del elemento en el HTML
-      document.getElementById('contenido-fetch').innerText = `Buscando empleado ${legajo}...`
+      document.getElementById('contenido-fetch').innerText =  mensajeDeCarga()
+      conteo++
       //const tablaAsignaciones = generarTablaAsignaciones(data.toString)
       //document.body.appendChild(tablaAsignaciones);
       return data;
@@ -24,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 async function mostrarAsignaciones() {
+    if (conteo <= bernal_colab.length){
     try {
         for (const empleado of bernal_colab) {
             const legajo = empleado[0];
@@ -33,6 +44,8 @@ async function mostrarAsignaciones() {
         }
     } catch (error) {
         console.error('Error al mostrar las asignaciones:', error);
+    }} else {
+        document.getElementById('contenido-fetch').innerText = "Las asignaciones ya fueron cargadas"
     }
 }
 
