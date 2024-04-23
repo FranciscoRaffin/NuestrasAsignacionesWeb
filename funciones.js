@@ -1,22 +1,21 @@
 var conteo = 1;
 var fotograma = 0;
+var imagen = ["🕐","🕑","🕒","🕓","🕔","🕕","🕖","🕗","🕘","🕙","🕚","🕛"];
+
 function animacion() {
-         if (fotograma==0){fotograma++
-             return " ◰."}
-    else if (fotograma==1) {fotograma++
-        return " ◳.."}
-    else if (fotograma==2) {fotograma++
-        return " ◲..."}
-    else {fotograma = 0
-        return " ◱...."}
+    fotograma++
+    if (fotograma == imagen.length){
+        fotograma = 0
+    }
+    return `${imagen[fotograma]}`
     
 }
 
 function mensajeDeCarga() {
     if (conteo >= bernal_colab.length) {
-        return "Asignaciones cargadas correctamente!";
+        return "👁 Asignaciones cargadas con éxito";
     } else {
-        return `Buscando empleados ${conteo} de ${bernal_colab.length}${animacion()}`;
+        return `${animacion()} Buscando empleados: ${conteo} de ${bernal_colab.length}`;
     }
 }
 
@@ -109,7 +108,7 @@ async function mostrarAsignacionesPorDia() {
             console.error('Error al mostrar las asignaciones:', error);
         }
     } else {
-        document.getElementById('contenido-fetch').innerText = "Las asignaciones ya fueron cargadas (para ver en el otro modo recarga la página)"
+        document.getElementById('contenido-fetch').innerText = "↻ Las asignaciones ya fueron cargadas: para ver en el otro modo recarga la página"
     }
 }
 
