@@ -124,7 +124,7 @@ async function mostrarAsignaciones() {
     } catch (error) {
         console.error('Error al mostrar las asignaciones:', error);
     }} else {
-        document.getElementById('contenido-fetch').innerText = "Las asignaciones ya fueron cargadas (para ver en el otro modo recarga la página)"
+        document.getElementById('contenido-fetch').innerText = "↻ Las asignaciones ya fueron cargadas: para ver en el otro modo recarga la página"
     }
 }
 
