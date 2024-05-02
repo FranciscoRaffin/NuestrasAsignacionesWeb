@@ -60,55 +60,51 @@ async function mostrarAsignacionesPorDia() {
                 }
             }
 
-            const tabla = document.createElement('table');
-            tabla.classList.add('asignaciones-table');
+            const contenedor = document.getElementById('asignaciones-container');
+            contenedor.innerHTML = ''; // Limpiar el contenedor antes de agregar las tablas
 
-            const encabezado = tabla.createTHead();
-            const filaEncabezado = encabezado.insertRow();
-            const encabezados = ['Fecha', 'Nombre', 'Hora de entrada', 'Hora de salida'];
-            encabezados.forEach(encabezado => {
-                const th = document.createElement('th');
-                th.textContent = encabezado;
-                filaEncabezado.appendChild(th);
-            });
-
-            const cuerpo = tabla.createTBody();
-
-            // Ordenar las fechas
-            const fechasOrdenadas = Object.keys(asignacionesPorFecha).sort();
-
-            // Iterar sobre las fechas ordenadas y crear las filas de la tabla
-            fechasOrdenadas.forEach((fecha, index) => {
-                // Insertar fila vacía de color negro entre los días, excepto después del último día
-                if (index > 0) {
-                    const filaEspaciadora = cuerpo.insertRow();
-                    filaEspaciadora.classList.add('espacio-entre-dias');
-                    const celdaEspaciadora = filaEspaciadora.insertCell();
-                    celdaEspaciadora.colSpan = encabezados.length;
-                }
-
+            // Crear tabla para cada fecha
+            Object.keys(asignacionesPorFecha).forEach(fecha => {
+                const tabla = document.createElement('table');
+                tabla.classList.add('asignaciones-table');
+            
+                // Crear un elemento h4 para mostrar la fecha
+                const fechaElemento = document.createElement('h5');
+                fechaElemento.textContent = fecha;
+                contenedor.appendChild(fechaElemento); // Agregar la fecha al contenedor
+            
+                const encabezado = tabla.createTHead();
+                const filaEncabezado = encabezado.insertRow();
+                const encabezados = ['Nombre', 'Hora de entrada', 'Hora de salida'];
+                encabezados.forEach(encabezado => {
+                    const th = document.createElement('th');
+                    th.textContent = encabezado;
+                    filaEncabezado.appendChild(th);
+                });
+            
+                const cuerpo = tabla.createTBody();
+            
                 // Ordenar las asignaciones dentro de cada fecha por la hora de entrada
                 asignacionesPorFecha[fecha].sort((a, b) => {
                     return a.asignacion.horaEntrada.localeCompare(b.asignacion.horaEntrada);
                 });
-
+            
                 asignacionesPorFecha[fecha].forEach(asignacion => {
                     const fila = cuerpo.insertRow();
-                    fila.insertCell().textContent = fecha;
                     fila.insertCell().textContent = asignacion.nombre; // Mostrar nombre en lugar de legajo
                     fila.insertCell().textContent = asignacion.asignacion.horaEntrada;
                     fila.insertCell().textContent = asignacion.asignacion.horaSalida;
                 });
+            
+                // Agregar la tabla al contenedor
+                contenedor.appendChild(tabla);
             });
 
-            const contenedor = document.getElementById('asignaciones-container');
-            contenedor.innerHTML = ''; // Limpiar el contenedor antes de agregar la tabla
-            contenedor.appendChild(tabla);
         } catch (error) {
             console.error('Error al mostrar las asignaciones:', error);
         }
     } else {
-        document.getElementById('contenido-fetch').innerText = "↻ Las asignaciones ya fueron cargadas: para ver en el otro modo recarga la página"
+        document.getElementById('contenido-fetch').innerText = "Las asignaciones ya fueron cargadas (para ver en el otro modo recarga la página)"
     }
 }
 
