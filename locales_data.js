@@ -22,7 +22,7 @@ const bernal_colab = [
     [ "131066" ,   "Fray Alucena"         ],
     [ "131055" ,   "Luna Zugasti"         ],
     [ "B6654"  ,   "Yamila Bizarap"       ]
-  //[ "131061" ,   "Luna Vasquez"         ],
+    [ "95140"  ,   "Milena"               ],
   //[ "131056" ,   "Micaela Menguele"     ],
   //[ "131041" ,   "Bruno Calcaterra"     ],
   //[ "18893" ,    "Walter R"             ],
