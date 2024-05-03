@@ -21,8 +21,8 @@ const bernal_colab = [
     [ "131067" ,   "Danilo Torres"        ],
     [ "131066" ,   "Fray Alucena"         ],
     [ "131055" ,   "Luna Zugasti"         ],
-    [ "B6654"  ,   "Yamila Bizarap"       ]
-    [ "95140"  ,   "Milena"               ],
+    [ "B6654"  ,   "Yamila Bizarap"       ],
+    [ "95140"  ,   "Milena"               ]
   //[ "131056" ,   "Micaela Menguele"     ],
   //[ "131041" ,   "Bruno Calcaterra"     ],
   //[ "18893" ,    "Walter R"             ],
