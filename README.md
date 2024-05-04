@@ -2,7 +2,7 @@
 
 Destinada a la visualización de horarios de los colaboradores de rango crew pertenecientes a la empresa ALSEA. 
 
-
+IMAGEN_MPD IMAGEN_MPC
 
 ## Tabla de Contenidos
 
