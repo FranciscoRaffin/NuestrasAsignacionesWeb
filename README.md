@@ -17,7 +17,7 @@ Destinada a la visualización de horarios de los colaboradores de rango crew per
 Una vez copiado el repositorio y establecido como página web, se deberá modificar unicamente un archivo para su uso.
 
 El archivo *locales_data.js* es el que contiene la información sobre los colaboradores en forma de tabla. 
-Para el funcionamiento d ela página este es el UNICO archivo que deberá modificarse. 
+Para el funcionamiento de la página este es el UNICO archivo que deberá modificarse. 
 
 ![LD](https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/locales_data.png)
 
