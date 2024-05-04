@@ -24,6 +24,11 @@ Para el funcionamiento de la página este es el UNICO archivo que deberá modifi
 Dentro de este archivo se encuentra la tabla de colaboradores. 
 Donde el primer elemento es el legajo y el segundo el nombre. 
 
+
+
+
+
+
 **Eliminar colaboradores** --> Se elimina el renglón o se le añade una doble barra (//) al inicio de esta.
 
 **Agregar colaboradores** --> Simplemente se los añade a la lista. 
