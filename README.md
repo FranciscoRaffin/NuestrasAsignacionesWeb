@@ -19,7 +19,7 @@ Una vez copiado el repositorio y establecido como página web, se deberá modifi
 El archivo *locales_data.js* es el que contiene la información sobre los colaboradores en forma de tabla. 
 Para el funcionamiento d ela página este es el UNICO archivo que deberá modificarse. 
 
-IMAGEN_1
+![LD](https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/locales_data.png)
 
 Dentro de este archivo se encuentra la tabla de colaboradores. 
 Donde el primer elemento es el legajo y el segundo el nombre. 
@@ -27,9 +27,9 @@ Donde el primer elemento es el legajo y el segundo el nombre.
 **Eliminar colaboradores** --> Se elimina el renglón o se le añade una doble barra (//) al inicio de esta.
 **Agregar colaboradores** --> Simplemente se los añade a la lista. 
 
-Nota: Notar que todos los renglones terminan con una coma al final menos el último. De no cumplirse esto, no funcionará correctamente.
+Nota: Notar que todos los renglones terminan con una coma al final menos el último (como se muestra en verde). De no cumplirse esto, no funcionará correctamente.
 
-IMAGEN_2
+![TABLA](https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/lista_colaboradores.png)
 
 ## Uso
 
