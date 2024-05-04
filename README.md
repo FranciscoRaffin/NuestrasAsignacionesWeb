@@ -24,10 +24,7 @@ Para el funcionamiento de la página este es el UNICO archivo que deberá modifi
 Dentro de este archivo se encuentra la tabla de colaboradores. 
 Donde el primer elemento es el legajo y el segundo el nombre. 
 
-
-
-
-
+## Uso
 
 **Eliminar colaboradores** --> Se elimina el renglón o se le añade una doble barra (//) al inicio de esta.
 
@@ -36,8 +33,6 @@ Donde el primer elemento es el legajo y el segundo el nombre.
 Nota: Notar que todos los renglones terminan con una coma al final menos el último (como se muestra en verde). De no cumplirse esto, no funcionará correctamente.
 
 ![TABLA](https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/lista_colaboradores.png)
-
-## Uso
 
 Por el momento, el proyecto es utilizado unicamente en un solo local, por lo que no surgió la necesidad de dar soporte a futuras adiciones ni selección entre locales. El proceso de incorporación de locales se encuentra detallado en las instrucciones.
 Sin embargo, si está contemplada la modificación sencilla de los integrantes del local. 
