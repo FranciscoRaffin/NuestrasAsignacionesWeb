@@ -3,9 +3,9 @@
 const bernal_colab = [
 //  |Legajo  [0]   |Nombre [1]
     [ "131054" ,   "Francisco Raffin"     ],
-    [ "131043" ,   "Samuel De Los Santos" ],
-    [ "131065" ,   "Milagros Britos"      ],
-    [ "131045" ,   "Rocio Marino"         ],
+    [ "131043" ,   "Chamuel De Los Santos"],
+    [ "131065" ,   "Milagros Birtos"      ],
+    [ "131045" ,   "Rochio Marino"        ],
     [ "131046" ,   "Lautaro Perez"        ],
     [ "131047" ,   "Facundo Barta"        ],
     [ "131053" ,   "Franco Delgado"       ],
@@ -21,13 +21,9 @@ const bernal_colab = [
     [ "131067" ,   "Danilo Torres"        ],
     [ "131066" ,   "Fray Alucena"         ],
     [ "131055" ,   "Luna Zugasti"         ],
-    [ "B6654"  ,   "Yamila Bizarap"       ]
-  //[ "131061" ,   "Luna Vasquez"         ],
-  //[ "131056" ,   "Micaela Menguele"     ],
-  //[ "131041" ,   "Bruno Calcaterra"     ],
-  //[ "18893" ,    "Walter R"             ],
-  //[ "81164" ,    "Juan Pablo Lecina"    ],
-  //[ "127002" ,   "Tomas Carbajal"       ],
+    [ "B6654"  ,   "Yamila Bizarap"       ],
+    [ "95140"  ,   "Milena"               ]
+
 
 ];
 
