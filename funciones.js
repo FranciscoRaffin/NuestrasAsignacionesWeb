@@ -13,9 +13,9 @@ function animacion() {
 
 function mensajeDeCarga() {
     if (conteo >= bernal_colab.length) {
-        return "Asignaciones cargadas correctamente!";
+        return "👁 Asignaciones cargadas con éxito";
     } else {
-        return `     ${animacion()}Buscando empleados: ${conteo} de ${bernal_colab.length}`;
+        return `${animacion()} Buscando empleados: ${conteo} de ${bernal_colab.length}`;
     }
 }
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function mostrarAsignacionesPorDia() {
-    if (conteo <= bernal_colab.length){
+    if (conteo <= bernal_colab.length) {
         try {
             const asignacionesPorFecha = {}; // Objeto para almacenar las asignaciones agrupadas por fecha
 
@@ -63,17 +63,24 @@ async function mostrarAsignacionesPorDia() {
             const contenedor = document.getElementById('asignaciones-container');
             contenedor.innerHTML = ''; // Limpiar el contenedor antes de agregar las tablas
 
-            // Crear tabla para cada fecha
-// Crear tabla para cada fecha
-            Object.keys(asignacionesPorFecha).forEach(fecha => {
+            // Ordenar las fechas
+            const fechasOrdenadas = Object.keys(asignacionesPorFecha).sort((a, b) => {
+                // Convertir las fechas de texto en objetos de fecha para compararlas
+                const fechaA = new Date(a.split(' ')[1]); // Seleccionar solo la parte DD/MM de la cadena
+                const fechaB = new Date(b.split(' ')[1]);
+                return fechaA - fechaB; // Ordenar en orden cronológico
+            });
+
+            // Crear tabla para cada fecha ordenada
+            fechasOrdenadas.forEach(fecha => {
                 const tabla = document.createElement('table');
                 tabla.classList.add('asignaciones-table');
-            
-                // Crear un elemento h4 para mostrar la fecha
+
+                // Crear un elemento h5 para mostrar la fecha
                 const fechaElemento = document.createElement('h5');
                 fechaElemento.textContent = fecha;
                 contenedor.appendChild(fechaElemento); // Agregar la fecha al contenedor
-            
+
                 const encabezado = tabla.createTHead();
                 const filaEncabezado = encabezado.insertRow();
                 const encabezados = ['Nombre', 'Hora de entrada', 'Hora de salida'];
@@ -82,21 +89,21 @@ async function mostrarAsignacionesPorDia() {
                     th.textContent = encabezado;
                     filaEncabezado.appendChild(th);
                 });
-            
+
                 const cuerpo = tabla.createTBody();
-            
+
                 // Ordenar las asignaciones dentro de cada fecha por la hora de entrada
                 asignacionesPorFecha[fecha].sort((a, b) => {
                     return a.asignacion.horaEntrada.localeCompare(b.asignacion.horaEntrada);
                 });
-            
+
                 asignacionesPorFecha[fecha].forEach(asignacion => {
                     const fila = cuerpo.insertRow();
                     fila.insertCell().textContent = asignacion.nombre; // Mostrar nombre en lugar de legajo
                     fila.insertCell().textContent = asignacion.asignacion.horaEntrada;
                     fila.insertCell().textContent = asignacion.asignacion.horaSalida;
                 });
-            
+
                 // Agregar la tabla al contenedor
                 contenedor.appendChild(tabla);
             });
@@ -108,7 +115,6 @@ async function mostrarAsignacionesPorDia() {
         document.getElementById('contenido-fetch').innerText = "Las asignaciones ya fueron cargadas (para ver en el otro modo recarga la página)"
     }
 }
-
 async function mostrarAsignaciones() {
     if (conteo <= bernal_colab.length){
     try {
@@ -121,7 +127,7 @@ async function mostrarAsignaciones() {
     } catch (error) {
         console.error('Error al mostrar las asignaciones:', error);
     }} else {
-        document.getElementById('contenido-fetch').innerText = "Las asignaciones ya fueron cargadas (para ver en el otro modo recarga la página)"
+        document.getElementById('contenido-fetch').innerText = "↻ Las asignaciones ya fueron cargadas: para ver en el otro modo recarga la página"
     }
 }
 
