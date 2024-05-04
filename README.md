@@ -36,4 +36,4 @@ Sin embargo, si está contemplada la modificación sencilla de los integrantes d
 
 ## Licencia
 
-El proyecto de gráficas se encuentra libre de toda licencias. 
+El proyecto de gráficas se encuentra libre de toda licencias. Sin embargo, por obvias razones se debe consultar con los gerentes a cargo del local y los colabopradores del mismo.
