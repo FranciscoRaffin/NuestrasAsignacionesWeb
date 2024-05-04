@@ -1,6 +1,7 @@
 # Nuestras Asignaciones Web
 
 Destinada a la visualización de horarios de los colaboradores de rango crew pertenecientes a la empresa ALSEA. 
+Pagina: https://franciscoraffin.github.io/NuestrasAsignacionesWeb/
 
 
 ![IMAGEN_MPD](https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/ejemplo.png)
