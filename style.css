@@ -456,6 +456,29 @@ input[type="submit"]:hover {
     transform-origin: 17% 50%;
     transform-style: preserve-3d;
   }
+  .hamster__cap {
+    position: absolute;
+    top: -0.5em;
+    left: -0.25em;
+    width: 2em;
+    height: 1em;
+    background-color: #808080;
+    border-radius: 50% 0 0 50% / 40% 20% 0 80%; /* Shape of the cap with a visor */
+    transform-origin: 50% 100%; 
+    animation: hamsterCap var(--dur) ease-in-out infinite;
+  }
+  
+  .hamster__cap-inner {
+    position: absolute; /* Position the inner cap relative to the hamster's head */
+    top: -1em; /* Vertical position of the inner cap on the hamster's head */
+    left: 0.9em; /* Horizontal position of the inner cap relative to the hamster's head */
+    width: 1.95em; /* Width of the inner cap */
+    height: 1.6em; /* Height of the inner cap */
+    background-color: #b7aea1; /* Color of the inner cap (same as the brim) */
+    border-radius: 50%; /* Shape of the inner cap (circular) */
+    transform-origin: 50% 100%; /* Transform origin for rotation */
+    animation: hamsterCapInner var(--dur) ease-in-out infinite; /* Animation for rotating the inner cap */
+  }
   
   .hamster__limb--fr,
   .hamster__limb--fl {
