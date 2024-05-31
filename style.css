@@ -644,9 +644,9 @@ input[type="submit"]:hover {
 
   .hamster__stick {
     position: absolute;
-    top: -6.5em;
+    top: -6.8em;
     left: 1.5em;
-    width: 0.5em;
+    width: 0.2em;
     height: 7em;
     background-color: brown;
     transform-origin: bottom;
@@ -656,35 +656,14 @@ input[type="submit"]:hover {
   
   .hamster__apple {
     position: absolute;
-    top: -0.5em;
-    left: 0.25em;
+    top: -8em;
+    left: -7em;
     width: 0.75em;
     height: 0.75em;
-    background-color: red;
-    border-radius: 50%;
     z-index: 1;
   }
-  button {
-    padding: 12.5px 30px;
-    border: 0;
-    border-radius: 100px;
-    background-color: #2ba8fb;
-    color: #ffffff;
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-  }
   
-  button:hover {
-    background-color: #6fc5ff;
-    box-shadow: 0 0 20px #6fc5ff50;
-    transform: scale(1.1);
-  }
-  
-  button:active {
-    background-color: #3d94cf;
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;
-    box-shadow: none;
-    transform: scale(0.98);
+  .imgWCQ{
+    width: 6em;
+    height: 10em;
   }
