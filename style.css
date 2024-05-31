@@ -5,7 +5,8 @@
     --color2: #284f8aff; /* NAV */ 
     --color4: #acaea9;
     --color3: #921f25d2;
-    --color5: #f0f0f0e7; /* Body */
+    --color5: #f0f0f0e7; /* Body       BLANCO */
+    /*--color5: #0a0a0ae7;  Body       NEGRO  */
     --color6: #e6e6e660;
 }
 
@@ -223,20 +224,6 @@ button:hover {
     
 }
 
-.remove-from-cart-button {
-    background-color: var(--color3);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    text-align: right;
-    text-decoration: none;
-    display: flex;
-    font-size: 14px;
-    margin-right: 0px;
-    cursor: pointer;
-    border-radius: 7px;
-    
-}
 
 
 .quantity-text{
@@ -653,4 +640,51 @@ input[type="submit"]:hover {
     to {
       transform: rotate(-1turn);
     }
+  }
+
+  .hamster__stick {
+    position: absolute;
+    top: -6.5em;
+    left: 1.5em;
+    width: 0.5em;
+    height: 7em;
+    background-color: brown;
+    transform-origin: bottom;
+    z-index: 2;
+    transform: rotate(-50deg);
+  }
+  
+  .hamster__apple {
+    position: absolute;
+    top: -0.5em;
+    left: 0.25em;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  button {
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #2ba8fb;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  
+  button:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
   }
