@@ -12,7 +12,7 @@ const bernal_colab = [
     [ "131018" ,   "Rocio Miranda"        ],
     [ "131021" ,   "Alejo Aguirre"        ],
     [ "B9830" ,    "Erica Rosso"          ],
-    //[ "131059" ,   "Natalie Fernandez (WASTED)"    ],
+    [ "131061" ,   "Luna Vasquez"         ],
     [ "131057" ,   "Florencia Ayala"      ],
     [ "95085" ,    "Agustin Cornejo"      ],
     [ "131005" ,   "Lautaro  Lezcano"     ],
@@ -22,7 +22,7 @@ const bernal_colab = [
     [ "131066" ,   "Fray Alucena"         ],
     [ "131055" ,   "Luna Zugasti"         ],
     [ "B6654"  ,   "Yamila Bizarap"       ],
-    [ "81164"  ,   "Juan Pablo"],
+    [ "81164"  ,   "Juan Pablo"           ],
     [ "95140"  ,   "Milena"               ]
 
 
