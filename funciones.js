@@ -38,6 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
     mostrarAsignacionesBtn.addEventListener('click', mostrarAsignaciones);
 });
 
+
+function fechaEspecial(fecha) {
+    if (fecha == "DOMINGO 09/06") {
+        return " (Gente de otro local no incluida)"
+    } else return ""
+}
+
 async function mostrarAsignacionesPorDia() {
     if (conteo <= bernal_colab.length) {
         try {
@@ -78,7 +85,7 @@ async function mostrarAsignacionesPorDia() {
 
                 // Crear un elemento h5 para mostrar la fecha
                 const fechaElemento = document.createElement('h5');
-                fechaElemento.textContent = fecha;
+                fechaElemento.textContent = fecha + fechaEspecial(fecha);
                 contenedor.appendChild(fechaElemento); // Agregar la fecha al contenedor
 
                 const encabezado = tabla.createTHead();
