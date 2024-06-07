@@ -41,8 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function fechaEspecial(fecha) {
     if (fecha == "DOMINGO 09/06") {
-        return " (Gente de otro local no incluida)"
+        return " (Viene gente de otro local no incluida)"
+    } else if (["LUNES 24/06","MARTES 25/06","MIERCOLES 26/06"].includes(fecha)) {
+        return " 🍔 STACKER DAY 🍔"
     } else return ""
+
+    
 }
 
 async function mostrarAsignacionesPorDia() {
