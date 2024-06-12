@@ -17,7 +17,7 @@ const bernal_colab = [
     [ "95085" ,    "Agustin Cornejo"      ],
     [ "131005" ,   "Lautaro  Lezcano"     ],
     [ "61379" ,    "Agustina Amodeo"      ],
-    [ "131062" ,   "Natanael Gomez"       ],
+    [ "131062" ,   "Natanael Gomez 👑"       ],
     [ "131067" ,   "Danilo Torres"        ],
     [ "131066" ,   "Fray Alucena"         ],
     [ "131055" ,   "Luna Zugasti"         ],
