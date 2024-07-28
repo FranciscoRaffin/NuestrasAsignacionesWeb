@@ -8,7 +8,7 @@ const bernal_colab = [
     [ "131045" ,   "Rochio Marino 👑"        ],
     [ "131046" ,   "Lautaro Perez"        ],
     [ "131047" ,   "Facundo Barta"        ],
-//    [ "131053" ,   "Franco Delgado"       ],
+    [ "131053" ,   "Franco Delgado"       ],
     [ "131018" ,   "Rocio Miranda"        ],
     [ "131021" ,   "Alejo Aguirre"        ],
     [ "B9830" ,    "Erica Rosso"          ],
