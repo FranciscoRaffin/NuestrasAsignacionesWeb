@@ -12,7 +12,7 @@ const bernal_colab = [
     [ "131018" ,   "Rocio Miranda"        ],
     [ "131021" ,   "Alejo Aguirre"        ],
     [ "B9830" ,    "Erica Rosso"          ],
-  //  [ "131061" ,   "Luna Vasquez"         ],
+  //  [ "131061" ,   "Luna Vasquez"         ], Chorra 
     [ "131057" ,   "Florencia Ayala"      ],
    // [ "95085" ,    "Agustin Cornejo"      ],
     [ "131005" ,   "Lautaro  Lezcano"     ],
