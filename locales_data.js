@@ -45,7 +45,7 @@ const colaborado = [
     [ "131062" ,   "Natanael Gomez"       ],
     [ "131067" ,   "Danilo Torres"        ],
     [ "131066" ,   "Fray Alucena"         ],
-    [ "131055" ,   "Luna Zugasti"         ],
+    //[ "131055" ,   "Luna Zugasti"         ],
     [ "B6654"  ,   "Yamila Bizarap"       ],
     [ "81164"  ,   "Juan Pablo"           ],
     [ "95140"  ,   "Milena"               ]
