@@ -1,6 +1,7 @@
 var conteo = 1;
 var fotograma = 0;
 var imagen = ["🕐","🕑","🕒","🕓","🕔","🕕","🕖","🕗","🕘","🕙","🕚","🕛"];
+var finished = false;
 
 function animacion() {
     fotograma++
@@ -11,26 +12,31 @@ function animacion() {
     
 }
 
-function mensajeDeCarga() {
-    if (conteo >= bernal_colab.length) {
+async function obtenerLongitudColaboradores() {
+    const listaColaboradores = await colaboradores;
+    console.log(listaColaboradores.length);
+    return listaColaboradores.length;
+}
+
+async function mensajeDeCarga() {
+    const colaboradoresLength = await obtenerLongitudColaboradores();
+    if (conteo >= colaboradoresLength) {
         return "👁 Asignaciones cargadas con éxito";
     } else {
-        return `${animacion()} Buscando empleados: ${conteo} de ${bernal_colab.length}`;
+        return `${animacion()} Buscando empleados...`;
     }
 }
 
-function fetchAsignacion(legajo) {
-    return fetch(`https://api.asignaciones.com.ar/start.php?CP=BK&legajo=${legajo}`)
-    .then(response => response.text()) // Retorna el contenido como texto
-    .then(data => {
-        // Actualiza el contenido del elemento en el HTML
-        document.getElementById('contenido-fetch').innerText = mensajeDeCarga();
+async function fetchAsignacion(legajo) {
+    try {
+        const response = await fetch(`https://api.asignaciones.com.ar/start.php?CP=BK&legajo=${legajo}`);
+        const data = await response.text();
+        document.getElementById('contenido-fetch').innerText = await mensajeDeCarga();
         conteo++;
         return data;
-    })
-    .catch(error => {
+    } catch (error) {
         console.error('Error al obtener el contenido:', error);
-    });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -49,15 +55,16 @@ function fechaEspecial(fecha) {
     
 }
 
+
 async function mostrarAsignacionesPorDia() {
-    if (conteo <= bernal_colab.length) {
+    if (!finished) {
         try {
             const asignacionesPorFecha = {}; // Objeto para almacenar las asignaciones agrupadas por fecha
 
-            for (const empleado of bernal_colab) {
-                const legajo = empleado[0];
-                const nombre = empleado[1];
-                const asignaciones = await fetchAsignacion(legajo); // Esperar a que se resuelva la promesa
+            const promesas = (await colaboradores).map(async (empleado) => {
+                const legajo = empleado.legajo;
+                const nombre = empleado.nombre;
+                const asignaciones = await fetchAsignacion(legajo);
                 const asignacionesData = JSON.parse(asignaciones);
 
                 if (asignacionesData && asignacionesData.asignaciones && asignacionesData.asignaciones.length > 0) {
@@ -69,17 +76,18 @@ async function mostrarAsignacionesPorDia() {
                         asignacionesPorFecha[fecha].push({ nombre, asignacion });
                     });
                 }
-            }
+            });
+
+            await Promise.all(promesas);
 
             const contenedor = document.getElementById('asignaciones-container');
             contenedor.innerHTML = ''; // Limpiar el contenedor antes de agregar las tablas
 
             // Ordenar las fechas
             const fechasOrdenadas = Object.keys(asignacionesPorFecha).sort((a, b) => {
-                // Convertir las fechas de texto en objetos de fecha para compararlas
-                const fechaA = new Date(a.split(' ')[1]); // Seleccionar solo la parte DD/MM de la cadena
+                const fechaA = new Date(a.split(' ')[1]);
                 const fechaB = new Date(b.split(' ')[1]);
-                return fechaA - fechaB; // Ordenar en orden cronológico
+                return fechaA - fechaB;
             });
 
             // Crear tabla para cada fecha ordenada
@@ -87,10 +95,9 @@ async function mostrarAsignacionesPorDia() {
                 const tabla = document.createElement('table');
                 tabla.classList.add('asignaciones-table');
 
-                // Crear un elemento h5 para mostrar la fecha
                 const fechaElemento = document.createElement('h5');
                 fechaElemento.textContent = fecha + fechaEspecial(fecha);
-                contenedor.appendChild(fechaElemento); // Agregar la fecha al contenedor
+                contenedor.appendChild(fechaElemento);
 
                 const encabezado = tabla.createTHead();
                 const filaEncabezado = encabezado.insertRow();
@@ -103,43 +110,45 @@ async function mostrarAsignacionesPorDia() {
 
                 const cuerpo = tabla.createTBody();
 
-                // Ordenar las asignaciones dentro de cada fecha por la hora de entrada
                 asignacionesPorFecha[fecha].sort((a, b) => {
                     return a.asignacion.horaEntrada.localeCompare(b.asignacion.horaEntrada);
                 });
 
                 asignacionesPorFecha[fecha].forEach(asignacion => {
                     const fila = cuerpo.insertRow();
-                    fila.insertCell().textContent = asignacion.nombre; // Mostrar nombre en lugar de legajo
+                    fila.insertCell().textContent = asignacion.nombre;
                     fila.insertCell().textContent = asignacion.asignacion.horaEntrada;
                     fila.insertCell().textContent = asignacion.asignacion.horaSalida;
                 });
 
-                // Agregar la tabla al contenedor
                 contenedor.appendChild(tabla);
             });
+            finished = !finished
 
         } catch (error) {
             console.error('Error al mostrar las asignaciones:', error);
         }
     } else {
-        document.getElementById('contenido-fetch').innerText = "Las asignaciones ya fueron cargadas (para ver en el otro modo recarga la página)"
+        alert("Las asignaciones ya fueron cargadas. Pulsa Aceptar para recargar la página");    
+        location.reload();
     }
 }
 async function mostrarAsignaciones() {
-    if (conteo <= bernal_colab.length){
+    if (!finished){
     try {
-        for (const empleado of bernal_colab) {
-            const legajo = empleado[0];
-            const nombre = empleado[1];
+        (await colaboradores).forEach(async (empleado)  => {
+            const legajo = empleado.legajo;
+            const nombre = empleado.nombre;
             const asignaciones = await fetchAsignacion(legajo); // Esperar a que se resuelva la promesa
             mostrarAsignacionEnPagina(legajo, nombre, asignaciones);
-        }
+        })
     } catch (error) {
         console.error('Error al mostrar las asignaciones:', error);
-    }} else {
-        document.getElementById('contenido-fetch').innerText = "↻ Las asignaciones ya fueron cargadas: para ver en el otro modo recarga la página"
+   }} else {
+    alert("Las asignaciones ya fueron cargadas. Pulsa Aceptar para recargar la página");    
+    location.reload();    
     }
+   finished = !finished
 }
 
 function mostrarAsignacionEnPagina(legajo, nombre, asignacionesJSON) {
