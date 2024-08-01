@@ -14,7 +14,7 @@ function animacion() {
 
 async function obtenerLongitudColaboradores() {
     const listaColaboradores = await colaboradores;
-    console.log(listaColaboradores.length);
+
     return listaColaboradores.length;
 }
 
@@ -197,6 +197,9 @@ function mostrarAsignacionEnPagina(legajo, nombre, asignacionesJSON) {
 
     contenedor.appendChild(empleadoDiv);
 }
+
+
+
 
 const volverAlInicio = () => window.location.href = "index.html";
 const irASolicitarHorario = () => window.location.href = "pedir_horario.html";
