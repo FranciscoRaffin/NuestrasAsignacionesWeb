@@ -32,7 +32,7 @@ Seleccionas "Valores separados por comas (.csv)" y publicar en la web.
 ![image](https://github.com/user-attachments/assets/95259916-2387-4d7f-92a7-4ff881c5db3e)
 
 4°
-El paso anterior te debería dar un link. Comunicate conmigo especificando el identificador que desees para tu local y ya estaría.
+El paso anterior te debería dar un link. Comunicate conmigo enviando el link y especificando el identificador que desees para tu local y ya estaría.
 
 
 ## Aclaración
