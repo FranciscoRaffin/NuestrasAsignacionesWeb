@@ -140,7 +140,7 @@ async function mostrarAsignaciones() {
             const legajo = empleado.legajo;
             const nombre = empleado.nombre;
             const asignaciones = await fetchAsignacion(legajo); // Esperar a que se resuelva la promesa
-            mostrarAsignacionEnPagina(legajo, nombre, asignaciones);
+            mostrarAsignacionEnPagina( nombre, asignaciones);
         })
     } catch (error) {
         console.error('Error al mostrar las asignaciones:', error);
@@ -151,11 +151,11 @@ async function mostrarAsignaciones() {
    finished = !finished
 }
 
-function mostrarAsignacionEnPagina(legajo, nombre, asignacionesJSON) {
+function mostrarAsignacionEnPagina( nombre, asignacionesJSON) {
     const contenedor = document.getElementById('asignaciones-container');
     const empleadoDiv = document.createElement('div');
     const legajoTitulo = document.createElement('h4');
-    legajoTitulo.textContent = `${nombre} (${legajo})`;
+    legajoTitulo.textContent = `${nombre}`;
     empleadoDiv.appendChild(legajoTitulo);
 
     // Convertir la cadena JSON de asignaciones en un objeto JavaScript
