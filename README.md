@@ -18,7 +18,7 @@ Página del proyecto: [Nuestras Asignaciones Web](https://franciscoraffin.github
 <img src="https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/ejemplo.png" alt="Ejemplo de Horarios" width="600"/>
 
 
-# ¿cómo agrego mi local al sistema?
+# ¿cómo se agrega un local al sistema?
 
 1° Creas un spreedsheet en [Google Spreadsheets](https://docs.google.com/spreadsheets) 
 siguiendo la estructura que se muestra en la foto anterior.
