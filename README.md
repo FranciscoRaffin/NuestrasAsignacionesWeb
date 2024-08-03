@@ -1,4 +1,4 @@
-# Nuestras Asignaciones Web
+![image](https://github.com/user-attachments/assets/5cea8a12-c0eb-4b64-8618-7af623f38665)# Nuestras Asignaciones Web
 
 Proyecto WEB destinado a la visualización de horarios laborales de cada colaborador de Burger King ordenado por local.
 
@@ -14,24 +14,27 @@ Al establecer una relación con la página, a esta unicamente se le necesitará 
 
 El sistema del identificador permite que sus horarios solo puedan ser visibles por quien sepa ese identificador. Además, si este id no es descriptivo del local, sería imposible para alguien externo saber de qué local se trata, ya que la página no muestra siquiera legajos.  
 
-
-
-
 Pagina: https://franciscoraffin.github.io/NuestrasAsignacionesWeb/
 
 
 ![IMAGEN_MPD](https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/ejemplo.png)
 
 
-## Tabla de Contenidos
+# ¿cómo agrego mi local al sistema?
 
-- [Instalación](#instalación)
-- [Uso](#uso)
+1° Creas un spreedsheet en https://docs.google.com/spreadsheets siguiendo la estructura que se muestra en la foto anterior.
 
-- [Licencia](#licencia)
+2° Clickeas Archivo->Compartir -> Publicar en la Web
+![image](https://github.com/user-attachments/assets/337ff39b-e72d-4194-afb0-203450030f8a)
+
+3°
+Seleccionas "Valores separados por comas (.csv)" y publicar en la web.
+![image](https://github.com/user-attachments/assets/95259916-2387-4d7f-92a7-4ff881c5db3e)
+
+4°
+El paso anterior te debería dar un link. Comunicate conmigo especificando el identificador que desees para tu local y ya estaría.
 
 
+## Aclaración
 
-## Licencia
-
-El proyecto de gráficas se encuentra libre de toda licencias. Sin embargo, por obvias razones se debe consultar con los gerentes a cargo del local y los colabopradores del mismo.
+El proyecto de gráficas se encuentra libre de toda licencias. Sin embargo, por obvias razones se recomienda encarecidamente consultar con los gerentes a cargo del local y los colabopradores del mismo antes de añadirlos a su tabla. Cada local cuenta por tanto con al menos una persona con acceso a la tabla, las cuales serán las responsables de los nombres y legajos que se asocie en dicha tabla.
