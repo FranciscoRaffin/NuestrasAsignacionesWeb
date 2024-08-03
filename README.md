@@ -15,7 +15,7 @@ El sistema de identificadores permite que los horarios solo sean visibles para q
 Página del proyecto: [Nuestras Asignaciones Web](https://franciscoraffin.github.io/NuestrasAsignacionesWeb/)
 
 
-![IMAGEN_MPD](https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/ejemplo.png)
+<img src="https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/ejemplo.png" alt="Ejemplo de Horarios" width="600"/>
 
 
 # ¿cómo agrego mi local al sistema?
