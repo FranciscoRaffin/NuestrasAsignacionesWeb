@@ -12,7 +12,7 @@ En lugar de complicarse con una base de datos, se utiliza Google Sheets para man
 El sistema de identificadores permite que los horarios solo sean visibles para quienes conozcan el identificador. Además, si el identificador no es descriptivo del local, será imposible para alguien externo saber de qué local se trata, ya que la página no muestra legajos.
 
 
-Pagina: https://franciscoraffin.github.io/NuestrasAsignacionesWeb/
+Página del proyecto: [Nuestras Asignaciones Web](https://franciscoraffin.github.io/NuestrasAsignacionesWeb/)
 
 
 ![IMAGEN_MPD](https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/ejemplo.png)
@@ -20,7 +20,7 @@ Pagina: https://franciscoraffin.github.io/NuestrasAsignacionesWeb/
 
 # ¿cómo agrego mi local al sistema?
 
-1° Creas un spreedsheet en https://docs.google.com/spreadsheets siguiendo la estructura que se muestra en la foto anterior.
+1° Creas un spreedsheet en [Google Spreadsheets](https://docs.google.com/spreadsheets) siguiendo la estructura que se muestra en la foto anterior.
 
 2° Clickeas Archivo->Compartir -> Publicar en la Web
 ![image](https://github.com/user-attachments/assets/337ff39b-e72d-4194-afb0-203450030f8a)
