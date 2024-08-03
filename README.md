@@ -1,6 +1,21 @@
 # Nuestras Asignaciones Web
 
-Destinada a la visualización de horarios de los colaboradores de rango crew pertenecientes a la empresa ALSEA. 
+Proyecto WEB destinado a la visualización de horarios laborales de cada colaborador de Burger King ordenado por local.
+
+La motivación de este proyecto es brindar una herramienta funcional que permita a los trabajadores de Burger King visualizar sus horarios de una manera cómoda y principalmente ver con qué compañeros se va a trabajar. Sin embargo, el proyecto se encuentra en constante evolución, y no se descarta que en un futuro se le incorporen nuevas funcionalidades que permitan por ejemplo el control de horas teóricas graficadas, o la validación de la disponibilidad dispuesta al local. 
+
+# ¿cómo funciona?
+Originalmene, los empleados debemos utilizar una aplicación llamada Mis Asignaciones, en la cual, uno introduce un legajo y la aplicación le despliega los horarios relacionados a dicho legajo. Sin embargo, esta manera de consultar deja de lado la posibiliodad de saber con quien se trabaja. Internamente la aplicación realiza un fetch a la API correspondiente especificándole el legajo del que se desea consultar. 
+
+Entonces, si se tienen todos los legajos de un local, uno puede "traerse" todas las asignaciones que tenga ese local ¿no? Esto así funciona, sin embargo, uno no recuerda absolutamente todos los legajos de sus compañeros, por lo que resulta necesario que se especifique su nombre.  
+
+Al tratarse de una relación sencilla, la cual puede ser expresada en una tabla simple, carese de sentido complicarse con una base de datos. Por esto entre otros factores, es más sensato hacer uso de un sistema  amigable para cualquier mortal. Google Sheet nos permite crear un archivo que contenga los legajos y sus nombres correspondientes. Estos sheets los maneja cada local, es decir, no necesitan pasar por mi para cambiar algún nombre, algún legajo o sacar/añadir colaboradores. Yo unicamente necesito el link que apunte al local (distinto del link del sheet) el cual se especifica más adelante.  
+Al establecer una relación con la página, a esta unicamente se le necesitará especificar el identificador del local y ya sabrá a qué Sheet deberá ir a buscar la información, y teniendo todos los nombres y legajos, el resto es lógica interna. 
+
+El sistema del identificador permite que sus horarios solo puedan ser visibles por quien sepa ese identificador. Además, si este id no es descriptivo del local, sería imposible para alguien externo saber de qué local se trata, ya que la página no muestra siquiera legajos.  
+
+
+
 
 Pagina: https://franciscoraffin.github.io/NuestrasAsignacionesWeb/
 
@@ -16,11 +31,6 @@ Pagina: https://franciscoraffin.github.io/NuestrasAsignacionesWeb/
 - [Licencia](#licencia)
 
 
-Nota: Notar que todos los renglones terminan con una coma al final menos el último (como se muestra en verde). De no cumplirse esto, no funcionará correctamente.
-
-
-Por el momento, el proyecto es utilizado unicamente en un solo local, por lo que no surgió la necesidad de dar soporte a futuras adiciones ni selección entre locales. El proceso de incorporación de locales se encuentra detallado en las instrucciones.
-Sin embargo, si está contemplada la modificación sencilla de los integrantes del local. 
 
 ## Licencia
 
