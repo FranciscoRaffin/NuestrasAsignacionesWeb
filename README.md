@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/5cea8a12-c0eb-4b64-8618-7af623f38665)# Nuestras Asignaciones Web
+# Nuestras Asignaciones Web
 
 Proyecto WEB destinado a la visualización de horarios laborales de cada colaborador de Burger King ordenado por local.
 
