@@ -32,7 +32,7 @@ Seleccionas "Valores separados por comas (.csv)" y publicar en la web. <br>
 
 
 4°
-El paso anterior te debería dar un link. Comunicate conmigo enviando el link y especificando el identificador que desees para tu local y ya estaría.
+El paso anterior te debería dar un link. Este es el que se utilizará dentro del sistema para definir la relacion.
 
 
 ## Aclaración
