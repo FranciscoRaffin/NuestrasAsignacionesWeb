@@ -15,7 +15,7 @@ let redirect = {
 
 
 
-const key = getParameterByName('local-key') ?? "MUESTRA";
+const key = getParameterByName('local-key') ?? "BERNAL";
 const local = redirect[String(key)];
 const colaboradores = colaboradoresFetch();
 
