@@ -1,18 +1,21 @@
 const BERNAL_SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9OPPzWnQ9MY2rEOfagp_z6EtjG9wUMzcmsYrjHxwvkNjqledSICKveN1JcnsV5ZLO48oyXduTMWZ4/pub?gid=0&single=true&output=csv";
 const RIVERA_SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9OPPzWnQ9MY2rEOfagp_z6EtjG9wUMzcmsYrjHxwvkNjqledSICKveN1JcnsV5ZLO48oyXduTMWZ4/pub?gid=104921192&single=true&output=csv";
 const ONCE_SHEET   = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQKZrBrDW6F0b6DvwrQFtOe5APL4s_lj1UjhsxGA3-3dM2zeT8XZjJt0gk0XeIz9LirnCF71oikYIxc/pub?output=csv" 
+const MUESTRA_SHEET= "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9OPPzWnQ9MY2rEOfagp_z6EtjG9wUMzcmsYrjHxwvkNjqledSICKveN1JcnsV5ZLO48oyXduTMWZ4/pub?gid=816645039&single=true&output=csv"
+
 
 // .html?local-key=RIVERA
 
 let redirect = {
   "BERNAL": BERNAL_SHEET,
   "RIVERA": RIVERA_SHEET,
-  "ONCE"  : ONCE_SHEET
+  "ONCE"  : ONCE_SHEET,
+  "MUESTRA": MUESTRA_SHEET
 };
 
 
 
-const key = getParameterByName('local-key') ?? "BERNAL";
+const key = getParameterByName('local-key') ?? "MUESTRA";
 const local = redirect[String(key)];
 const colaboradores = colaboradoresFetch();
 
