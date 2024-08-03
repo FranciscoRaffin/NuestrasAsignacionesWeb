@@ -23,11 +23,12 @@ Página del proyecto: [Nuestras Asignaciones Web](https://franciscoraffin.github
 1° Creas un spreedsheet en [Google Spreadsheets](https://docs.google.com/spreadsheets) siguiendo la estructura que se muestra en la foto anterior.
 
 2° Clickeas Archivo->Compartir -> Publicar en la Web
-![image](https://github.com/user-attachments/assets/337ff39b-e72d-4194-afb0-203450030f8a)
+<img src="https://github.com/user-attachments/assets/337ff39b-e72d-4194-afb0-203450030f8a" alt="2" width="600"/>
 
 3°
 Seleccionas "Valores separados por comas (.csv)" y publicar en la web.
-![image](https://github.com/user-attachments/assets/95259916-2387-4d7f-92a7-4ff881c5db3e)
+<img src="https://github.com/user-attachments/assets/95259916-2387-4d7f-92a7-4ff881c5db3e"  width="600"/>
+
 
 4°
 El paso anterior te debería dar un link. Comunicate conmigo enviando el link y especificando el identificador que desees para tu local y ya estaría.
