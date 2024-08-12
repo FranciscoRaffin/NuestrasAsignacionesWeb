@@ -32,7 +32,11 @@ Seleccionas "Valores separados por comas (.csv)" y publicar en la web. <br>
 
 
 4°
-El paso anterior te debería dar un link. Este es el que se utilizará dentro del sistema para definir la relacion.
+El paso anterior te debería dar un link. Este es el que se utilizará dentro del sistema para definir la relacion. 
+Con esta relación establecida (por mi), se podra visualizar la página del local utilizando dentro del link el identificador del mismo (el cual es a elección). 
+<img src="https://github.com/user-attachments/assets/82f69b3b-081a-4cbe-8e63-583837525081"  width="400"/>
+Nota: Esta imagen es un ejemplo de un local de muestra el cual tiene "MUESTRA" como identificador.
+
 
 
 ## Aclaración
