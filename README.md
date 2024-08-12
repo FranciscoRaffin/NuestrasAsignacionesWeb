@@ -12,7 +12,7 @@ En lugar de complicarse con una base de datos, se utiliza Google Sheets para man
 El sistema de identificadores permite que los horarios solo sean visibles para quienes conozcan el identificador. Además, si el identificador no es descriptivo del local, será imposible para alguien externo saber de qué local se trata, ya que la página no muestra legajos.
 
 
-Página del proyecto: [Nuestras Asignaciones Web](https://franciscoraffin.github.io/NuestrasAsignacionesWeb/)
+Página del proyecto: [Nuestras Asignaciones Web](https://franciscoraffin.github.io/NuestrasAsignacionesWeb/?local-key=MUESTRA)
 
 
 <img src="https://github.com/FranciscoRaffin/NuestrasAsignacionesWeb/blob/main/readme_imagenes/ejemplo.png" alt="Ejemplo de Horarios" width="600"/>
