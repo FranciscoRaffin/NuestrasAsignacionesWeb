@@ -101,7 +101,7 @@ async function mostrarAsignacionesPorDia() {
 
                 const encabezado = tabla.createTHead();
                 const filaEncabezado = encabezado.insertRow();
-                const encabezados = ['Nombre', 'Hora de entrada', 'Hora de salida'];
+                const encabezados = ['Nombre', 'Entrada', 'Salida'];
                 encabezados.forEach(encabezado => {
                     const th = document.createElement('th');
                     th.textContent = encabezado;
