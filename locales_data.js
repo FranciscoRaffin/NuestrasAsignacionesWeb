@@ -2,7 +2,7 @@ const BERNAL_SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9OPPzWnQ
 const RIVERA_SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9OPPzWnQ9MY2rEOfagp_z6EtjG9wUMzcmsYrjHxwvkNjqledSICKveN1JcnsV5ZLO48oyXduTMWZ4/pub?gid=104921192&single=true&output=csv";
 const ONCE_SHEET   = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQKZrBrDW6F0b6DvwrQFtOe5APL4s_lj1UjhsxGA3-3dM2zeT8XZjJt0gk0XeIz9LirnCF71oikYIxc/pub?output=csv" 
 const MUESTRA_SHEET= "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9OPPzWnQ9MY2rEOfagp_z6EtjG9wUMzcmsYrjHxwvkNjqledSICKveN1JcnsV5ZLO48oyXduTMWZ4/pub?gid=816645039&single=true&output=csv"
-
+const OS_PIBARDOS  = "https://docs.google.com/spreadsheets/d/1mP_bQmxeXPiSLg0IVOk-01TU-jVzeoPmHsw3OybUeqo/pub?gid=1268687985&single=true&output=csv"
 
 // .html?local-key=RIVERA
 
@@ -10,7 +10,8 @@ let redirect = {
   "BERNAL": BERNAL_SHEET,
   "RIVERA": RIVERA_SHEET,
   "ONCE"  : ONCE_SHEET,
-  "MUESTRA": MUESTRA_SHEET
+  "MUESTRA": MUESTRA_SHEET,
+  "OS_PIBARDOS" : OS_PIBARDOS
 };
 
 
